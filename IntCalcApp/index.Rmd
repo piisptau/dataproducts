@@ -1,0 +1,55 @@
+---
+title       : Interest compounding
+subtitle    : 
+author      : 
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+
+--- .class #id
+
+## Description
+
+This application shows how initial sum is compunded by different interest rates
+
+--- .class #id
+
+## User selectable parameters
+
+* Number of years
+* Rate of interest
+* Initial sum
+* Compounding period length
+
+Calculation is based on the following simple formula
+
+```{r}
+InterestRate = 1.5
+NumberOfYears = 10
+InitialSum = 1000
+CompoundingPeriod = 1
+
+InitialSum * (1+(((InterestRate/100)/CompoundingPeriod)))^(NumberOfYears/CompoundingPeriod)
+
+```
+
+
+--- .class #id
+
+## Display
+
+Application displays a curve showing how the initial sum will during the selected number of years.
+
+--- .class #id
+
+## Future plans
+
+* Make more effective graphics
+
+
+
+
